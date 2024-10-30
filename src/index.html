@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <title>Centered Text with Navbar</title>
+</head>
+<body class="bg-pink-300">
+  <!-- Navbar -->
+  <nav class="fixed z-10 w-full bg-black shadow-md">
+    <div class="container flex items-center justify-between px-4 py-2 mx-auto">
+        <a href="#" class="text-4xl font-bold text-blue-600 font-bebas">OFG</a>
+        <!-- Hamburger icon for mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Navigation Links -->
+        <div id="menu" class="hidden space-x-4 md:flex">
+            <a href="#" class="block text-2xl text-white hover:text-blue-600">Home</a>
+            <a href="#" class="block text-2xl text-white hover:text-blue-600">About</a>
+            <a href="#" class="block text-2xl text-white hover:text-blue-600">Shop</a>
+            <a href="#" class="block text-2xl text-white hover:text-blue-600">Contact</a>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Centered Content -->
+  <div class="flex items-center justify-center h-screen " style="padding-top: 15rem;">
+      <h1 class="pt-5 text-5xl text-blue-600 font-bebas">Get Connected</h1>
+  </div>
+
+  <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+  </script>
+
+</body>
+</html>
